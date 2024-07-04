@@ -29,11 +29,17 @@ while True:
             numero_saques += 1
             valor_total_saque_dia += valor_de_saque
 
-    elif operacao == 'extrato':    
-        extrato = saldo
-        print(f'Boa Tarde! O seu extrato é de R${extrato:.2f}.')
+    elif operacao == 'extrato':
+
+        print("\n================ EXTRATO ================")
+        print("Não foram realizadas movimentações." if not extrato else extrato)
+        print(f"\nSaldo: R$ {saldo:.2f}")
+        print("==========================================")
+
 
     elif operacao == 'sair':
         break
 
+    else:         
+        print("Operação inválida, por favor selecione novamente a operação desejada.")
    
